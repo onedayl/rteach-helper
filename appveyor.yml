@@ -6,7 +6,6 @@ branches:
 
 image: Visual Studio 2019
 platform:
-  - x64
   - x86
 
 cache:
@@ -34,7 +33,7 @@ artifacts:
   name: myartifact
 
 deploy:
-  release: rteach-helper-v$(appveyor_build_version)
+  release: rteach-helper_v$(appveyor_build_version)_$(platform)
   description: 'rteach-helper release'
   provider: GitHub
   auth_token:
